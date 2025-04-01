@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-image:url("/static/goodheart.jpg"); /* Add your background image in the same folder as this file */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.7); /* Slight transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Prediction</h1>
+        <form action="/predict" method="post">
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>Sex (1=Male, 0=Female):</label>
+            <input type="number" name="sex" required>
+
+            <label>Chest Pain Type:</label>
+            <input type="number" name="chest_pain_type" required>
+
+            <label>Resting BP (s):</label>
+            <input type="number" name="resting_bp" required>
+
+            <label>Cholesterol:</label>
+            <input type="number" name="cholesterol" required>
+
+            <label>Fasting Blood Sugar (0 or 1):</label>
+            <input type="number" name="fasting_blood_sugar" required>
+
+            <label>Resting ECG:</label>
+            <input type="number" name="resting_ecg" required>
+
+            <label>Max Heart Rate:</label>
+            <input type="number" name="max_heart_rate" required>
+
+            <label>Exercise Angina (0 or 1):</label>
+            <input type="number" name="exercise_angina" required>
+
+            <label>Oldpeak:</label>
+            <input type="number" name="oldpeak" required>
+
+            <label>ST Slope:</label>
+            <input type="number" name="st_slope" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
